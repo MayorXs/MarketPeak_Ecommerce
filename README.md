@@ -1,56 +1,76 @@
 # MarketPeak E-Commerce Deployment
 
 ## Project Overview
-E-commerce platform deployment using Git, Linux, and AWS EC2 for the online marketplace "MarketPeak".
+MarketPeak is an e-commerce platform featuring product listings, a shopping cart, and user authentication.  
+This project involves setting up version control with Git, developing in a Linux environment, and deploying on AWS EC2.  
+The goal is to demonstrate a complete DevOps workflow from local development to cloud deployment.
 
-## Technologies Used
-- Git (Version Control)
-- HTML/CSS (Frontend)
-- Apache (Web Server)
-- AWS EC2 (Cloud Deployment)
+---
 
-## Deployment Steps
-
-### 1. Git Setup
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/YOURUSERNAME/MarketPeak_Ecommerce.git
-git push -u origin main
+## Project Evidence Screenshots
+All project screenshots will be stored in the **/screenshots** folder in the root of this repository.  
+Example Markdown for adding a screenshot in your README:
+```markdown
+![Description of screenshot](screenshots/screenshot-name.png)
 ```
 
-### 2. AWS EC2 Configuration
-- Launched Amazon Linux 2023 AMI (t2.micro)
-- Security Groups: HTTP (80) + SSH (22)
-- Connected via SSH:
-  ```bash
-  ssh -i key.pem ec2-user@IP
-  ```
+---
 
-### 3. Web Server Installation
-```bash
-sudo yum update -y
-sudo yum install httpd git -y
-sudo systemctl start httpd
-sudo systemctl enable httpd
-```
+## Phase 1 – Sync & Review (Completed ✅)
+**Tasks Performed:**
+- Cloned existing GitHub repository to local machine.
+- Verified website template files exist (`index.html`, `about.html`, `contact.html`, product pages, CSS/JS assets).
+- Confirmed repository was initialized with Git.
+- Checked remote linking to GitHub (`origin`).
+- No uncommitted changes at the start.
 
-### 4. File Transfer
-```bash
-git clone https://github.com/MayorXs/MarketPeak_Ecommerce.git
-sudo cp -r MarketPeak_Ecommerce/* /var/www/html/
-sudo systemctl restart httpd
-```
+**Evidence:**
+- ![Project directory structure](screenshots/phase1-directory-structure.png)
+- ![Git status clean working tree](screenshots/phase1-git-status.png)
+- ![Remote repository link](screenshots/phase1-remote-link.png)
 
-## Screenshots
-![Homepage](documentation/screenshots/01-homepage.png)
-![Products Page](documentation/screenshots/02-products.png)
-![AWS Deployment](documentation/screenshots/03-aws-deployment.png)
+---
 
-## Access
-Live URL: http://107.22.146.74
+## Phase 2 – Git Version Control Setup (Completed ✅)
+**Tasks Performed:**
+- Configured global Git username and email.
+- Verified presence of `main` and `development` branches.
+- Pushed both branches to GitHub to ensure remote synchronization.
 
-## Troubleshooting
-- 403 Forbidden Error: Ensure files are in `/var/www/html` with proper permissions
-- Git Push Issues: Verify PAT (Personal Access Token) is configured
+**Evidence:**
+- ![Git config output](screenshots/phase2-git-config.png)
+- ![Branch list and switching](screenshots/phase2-branch-list.png)
+- ![Git push success for branches](screenshots/phase2-git-push.png)
+
+---
+
+## Phase 3 – Linux Development Environment (Upcoming)
+**Planned Tasks:**
+- Switch to `development` branch for new updates.
+- Implement additional features or content updates.
+- Merge changes from `development` into `main`.
+
+---
+
+## Phase 4 – AWS Deployment (Upcoming)
+**Planned Tasks:**
+- Launch Amazon EC2 instance (Amazon Linux 2023 AMI).
+- Transfer website files to EC2 instance via SCP/SFTP.
+- Install Apache HTTP server (`httpd`).
+- Configure server to serve website.
+- Access site in browser via EC2 public IP.
+
+---
+
+## Phase 5 – CI/CD Workflow (Upcoming)
+**Planned Tasks:**
+- Use Git branching for updates.
+- Push changes to GitHub and pull updates on EC2 server.
+- Automate deployment steps where possible.
+
+---
+
+## Phase 6 – Documentation & Submission (Upcoming)
+**Planned Tasks:**
+- Complete README.md with final documentation, screenshots, and troubleshooting notes.
+- Share GitHub repository link for project submission.
