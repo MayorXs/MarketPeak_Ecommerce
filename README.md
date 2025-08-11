@@ -38,7 +38,7 @@ sudo systemctl enable httpd
 
 ### 4. File Transfer
 ```bash
-git clone https://github.com/YOURUSERNAME/MarketPeak_Ecommerce.git
+git clone https://github.com/MayorXs/MarketPeak_Ecommerce.git
 sudo cp -r MarketPeak_Ecommerce/* /var/www/html/
 sudo systemctl restart httpd
 ```
