@@ -103,6 +103,35 @@ ssh -i Tribeca1.pem ec2-user@<EC2-Public-IP>
 - Configure server to serve website.
 - Access site in browser via EC2 public IP.
 
+## Phase 4 – Continuous Integration & Deployment (CI/CD) Workflow
+
+This phase implements a smooth Git workflow for developing, testing, and deploying updates to the MarketPeak site.
+
+---
+
+### **Execution Steps**
+
+1. **Create Development Branch**
+   ```bash
+   git branch development
+   git checkout development
+
+# MarketPeak E-Commerce Platform Deployment
+
+## Overview
+This project demonstrates the deployment of an e-commerce website, **MarketPeak**, using Git for version control, a Linux development environment, and AWS EC2 for hosting. The platform features product listings, a shopping cart, and user authentication.
+
+---
+
+## 📌 Phase 1: Git Version Control Setup
+
+### Steps Performed:
+1. **Created Project Directory**  
+   ```bash
+   mkdir MarketPeak_Ecommerce
+   cd MarketPeak_Ecommerce
+   git init
+
 ---
 
 ## Phase 5 – CI/CD Workflow (Upcoming)
