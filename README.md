@@ -49,6 +49,49 @@ Example Markdown for adding a screenshot in your README:
 - Switch to `development` branch for new updates.
 - Implement additional features or content updates.
 - Merge changes from `development` into `main`.
+## Phase 3 – Linux Development Environment
+
+### 3.1 Create Development Branch
+```bash
+git checkout -b development
+
+## Phase 3 — AWS Deployment
+
+This phase covers setting up an Amazon EC2 instance, installing a web server, transferring files, and making the site publicly accessible.
+
+---
+
+### 3.1 EC2 Instance Setup
+1. **Login to AWS Management Console**
+2. **Launch EC2 Instance**
+   - AMI: Amazon Linux 2023
+   - Instance type: t2.micro (Free Tier)
+   - Key pair: `your-key.pem` (Download & keep safe)
+   - Security Group: Allow HTTP (port 80) and SSH (port 22)
+3. **Connect to EC2 using SSH**
+   ```bash
+   ssh -i your-key.pem ec2-user@107.22.146.74
+
+## Phase 3 – AWS Deployment Execution Plan
+
+### Step 1 – Launch EC2 Instance
+1. Log in to AWS Management Console.
+2. Go to **EC2 → Launch Instance**:
+   - **Name:** MarketPeak-EC2
+   - **AMI:** Amazon Linux 2023 (Free Tier eligible)
+   - **Instance type:** `t2.micro`
+   - **Key pair:** Create or use existing (e.g., `Tribeca1.pem`)
+   - **Security Group:** Allow **SSH (22)** and **HTTP (80)**
+3. Launch the instance and copy the **Public IPv4 address**.
+
+📸 **Screenshot:** `screenshots/phase3-ec2-instance.png`
+
+---
+
+### Step 2 – Connect to EC2
+From local machine:
+```bash
+ssh -i Tribeca1.pem ec2-user@<EC2-Public-IP>
 
 ---
 
